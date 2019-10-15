@@ -84,7 +84,7 @@ Accept `NestCookieSessionOptions`. Returns NestJS `DynamicModule` for import.
 
 ### CookieSessionModule.forRootAsync
 
-Accept `NestCookieSessionOptions`. Returns NestJS `DynamicModule` for import.
+Accept `NestCookieSessionAsyncOptions`. Returns NestJS `DynamicModule` for import.
 
 ### NestCookieSessionOptions
 
@@ -94,7 +94,7 @@ Accept `NestCookieSessionOptions`. Returns NestJS `DynamicModule` for import.
 - `forRoutes` - __optional__ - same as NestJS buil-in `MiddlewareConfigProxy['forRoutes']` [See exmaples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
 - `exclude` - __optional__ - same as NestJS buil-in `MiddlewareConfigProxy['exclude']` [See exmaples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should not have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
 
-### NestCookieSessionOptions
+### NestCookieSessionAsyncOptions
 
 `NestCookieSessionOptions` is interface of options to create cookie session module, that depends on other modules, has next properties:
 
