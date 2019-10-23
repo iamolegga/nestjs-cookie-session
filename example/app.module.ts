@@ -3,11 +3,7 @@ import { CookieSessionModule } from '../';
 import { AppController } from './app.controller';
 
 @Module({
-  imports: [
-    CookieSessionModule.forRoot({
-      session: { secret: 'qwerty' },
-    }),
-  ],
+  imports: [CookieSessionModule.forRoot({ session: { secret: 'qwerty' } })],
   controllers: [AppController],
 })
 export class AppModule {}

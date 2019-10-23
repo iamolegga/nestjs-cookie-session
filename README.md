@@ -57,6 +57,17 @@ export class ViewsController {
 }
 ```
 
+To run examples:
+
+```sh
+git clone https://github.com/iamolegga/nestjs-cookie-session.git
+cd nestjs-cookie-session
+npm i
+cd example
+npm i
+npm start
+```
+
 ## Install
 
 ```sh
