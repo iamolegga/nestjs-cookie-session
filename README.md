@@ -1,7 +1,31 @@
-# Nestjs cookie session
+<h1 align="center">nestjs-cookie-session</h1>
 
-Idiomatic Cookie Session Module for NestJS.
-Built on top of [cookie-session](https://npm.im/cookie-session) 😎
+<p align="center">
+  <a href="https://www.npmjs.com/package/nestjs-cookie-session">
+    <img alt="npm" src="https://img.shields.io/npm/v/nestjs-cookie-session" />
+  </a>
+  <a href="https://travis-ci.org/iamolegga/nestjs-cookie-session">
+    <img alt="Travis (.org)" src="https://img.shields.io/travis/iamolegga/nestjs-cookie-session" />
+  </a>
+  <a href="https://coveralls.io/github/iamolegga/nestjs-cookie-session?branch=master">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/iamolegga/nestjs-cookie-session/badge.svg?branch=master" />
+  </a>
+  <img alt="Supported platforms: Express" src="https://img.shields.io/badge/platforms-Express-green" />
+</p>
+<p align="center">
+  <a href="https://snyk.io/test/github/iamolegga/nestjs-cookie-session">
+    <img alt="Snyk Vulnerabilities for npm package" src="https://img.shields.io/snyk/vulnerabilities/npm/nestjs-cookie-session" />
+  </a>
+  <a href="https://david-dm.org/iamolegga/nestjs-cookie-session">
+    <img alt="Dependencies status" src="https://badgen.net/david/dep/iamolegga/nestjs-cookie-session">
+  </a>
+  <img alt="Dependabot" src="https://badgen.net/dependabot/iamolegga/nestjs-cookie-session/?icon=dependabot">
+  <a href="https://codeclimate.com/github/iamolegga/nestjs-cookie-session">
+    <img alt="Maintainability" src="https://badgen.net/codeclimate/maintainability/iamolegga/nestjs-cookie-session">
+  </a>
+</p>
+
+<p align="center">Idiomatic Cookie Session Module for NestJS. Built on top of <a href="https://npm.im/cookie-session">cookie-session</a> 😎</p>
 
 ## Example
 
