@@ -34,12 +34,14 @@ Register module:
 ```ts
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { NestCookieSessionOptions, CookieSessionModule } from 'nestjs-cookie-session';
+import {
+  NestCookieSessionOptions,
+  CookieSessionModule,
+} from 'nestjs-cookie-session';
 import { ViewsController } from './views.controller';
 
 @Module({
   imports: [
-
     // sync params:
 
     CookieSessionModule.forRoot({
@@ -125,14 +127,79 @@ Accept `NestCookieSessionAsyncOptions`. Returns NestJS `DynamicModule` for impor
 
 `NestCookieSessionOptions` is interface of all options, has next properties:
 
-- `session` - __required__ - [cookie-session options](https://github.com/expressjs/cookie-session#options).
-- `forRoutes` - __optional__ - same as NestJS buil-in `MiddlewareConfigProxy['forRoutes']` [See exmaples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
-- `exclude` - __optional__ - same as NestJS buil-in `MiddlewareConfigProxy['exclude']` [See exmaples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should not have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
+- `session` - **required** - [cookie-session options](https://github.com/expressjs/cookie-session#options).
+- `forRoutes` - **optional** - same as NestJS buil-in `MiddlewareConfigProxy['forRoutes']` [See exmaples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
+- `exclude` - **optional** - same as NestJS buil-in `MiddlewareConfigProxy['exclude']` [See exmaples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should not have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
 
 ### NestCookieSessionAsyncOptions
 
 `NestCookieSessionOptions` is interface of options to create cookie session module, that depends on other modules, has next properties:
 
-- `imports` - __optional__ - modules, that cookie session module depends on. See [official docs](https://docs.nestjs.com/modules).
-- `inject` - __optional__ - providers from `imports`-property modules, that will be passed as arguments to `useFactory` method.
-- `useFactory` - __required__ - method, that returns `NestCookieSessionOptions`.
+- `imports` - **optional** - modules, that cookie session module depends on. See [official docs](https://docs.nestjs.com/modules).
+- `inject` - **optional** - providers from `imports`-property modules, that will be passed as arguments to `useFactory` method.
+- `useFactory` - **required** - method, that returns `NestCookieSessionOptions`.
+
+<h2 align="center">Do you use this library?<br/>Don't be shy to give it a star! ★</h2>
+
+Also if you are into NestJS ecosystem you may be interested in one of my other libs:
+
+[nestjs-pino](https://github.com/iamolegga/nestjs-pino)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/nestjs-pino?style=flat-square)](https://github.com/iamolegga/nestjs-pino)
+[![npm](https://img.shields.io/npm/dm/nestjs-pino?style=flat-square)](https://www.npmjs.com/package/nestjs-pino)
+
+Platform agnostic logger for NestJS based on [pino](http://getpino.io/) with request context in every log
+
+---
+
+[nestjs-session](https://github.com/iamolegga/nestjs-session)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/nestjs-session?style=flat-square)](https://github.com/iamolegga/nestjs-session)
+[![npm](https://img.shields.io/npm/dm/nestjs-session?style=flat-square)](https://www.npmjs.com/package/nestjs-session)
+
+Idiomatic session module for NestJS. Built on top of [express-session](https://www.npmjs.com/package/express-session)
+
+---
+
+[nestjs-cookie-session](https://github.com/iamolegga/nestjs-cookie-session)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/nestjs-cookie-session?style=flat-square)](https://github.com/iamolegga/nestjs-cookie-session)
+[![npm](https://img.shields.io/npm/dm/nestjs-cookie-session?style=flat-square)](https://www.npmjs.com/package/nestjs-cookie-session)
+
+Idiomatic cookie session module for NestJS. Built on top of [cookie-session](https://www.npmjs.com/package/cookie-session)
+
+---
+
+[nestjs-roles](https://github.com/iamolegga/nestjs-roles)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/nestjs-roles?style=flat-square)](https://github.com/iamolegga/nestjs-roles)
+[![npm](https://img.shields.io/npm/dm/nestjs-roles?style=flat-square)](https://www.npmjs.com/package/nestjs-roles)
+
+Type safe roles guard and decorator made easy
+
+---
+
+[nest-ratelimiter](https://github.com/iamolegga/nestjs-ratelimiter)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/nestjs-ratelimiter?style=flat-square)](https://github.com/iamolegga/nestjs-ratelimiter)
+[![npm](https://img.shields.io/npm/dm/nest-ratelimiter?style=flat-square)](https://www.npmjs.com/package/nest-ratelimiter)
+
+Distributed consistent flexible NestJS rate limiter based on Redis
+
+---
+
+[create-nestjs-middleware-module](https://github.com/iamolegga/create-nestjs-middleware-module)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/create-nestjs-middleware-module?style=flat-square)](https://github.com/iamolegga/create-nestjs-middleware-module)
+[![npm](https://img.shields.io/npm/dm/create-nestjs-middleware-module?style=flat-square)](https://www.npmjs.com/package/create-nestjs-middleware-module)
+
+Create simple idiomatic NestJS module based on Express/Fastify middleware in just a few lines of code with routing out of the box
+
+---
+
+[nestjs-configure-after](https://github.com/iamolegga/nestjs-configure-after)
+
+[![GitHub stars](https://img.shields.io/github/stars/iamolegga/nestjs-configure-after?style=flat-square)](https://github.com/iamolegga/nestjs-configure-after)
+[![npm](https://img.shields.io/npm/dm/nestjs-configure-after?style=flat-square)](https://www.npmjs.com/package/nestjs-configure-after)
+
+Declarative configuration of NestJS middleware order
