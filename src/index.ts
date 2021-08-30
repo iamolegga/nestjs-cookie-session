@@ -6,6 +6,9 @@ import {
 } from 'create-nestjs-middleware-module';
 
 interface Options {
+  /**
+   * cookie-session options. @see https://www.npmjs.com/package/cookie-session#options
+   */
   session: Parameters<typeof cookieSession>[0];
 }
 

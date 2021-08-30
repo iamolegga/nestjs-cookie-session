@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { CookieSessionModule } from '../';
+import { CookieSessionModule } from '../../dist';
 import { AppController } from './app.controller';
 
 @Module({

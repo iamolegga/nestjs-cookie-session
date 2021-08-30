@@ -4,11 +4,9 @@
   <a href="https://www.npmjs.com/package/nestjs-cookie-session">
     <img alt="npm" src="https://img.shields.io/npm/v/nestjs-cookie-session" />
   </a>
-  <a href="https://travis-ci.org/iamolegga/nestjs-cookie-session">
-    <img alt="Travis (.org)" src="https://img.shields.io/travis/iamolegga/nestjs-cookie-session" />
-  </a>
-  <a href="https://coveralls.io/github/iamolegga/nestjs-cookie-session?branch=master">
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/iamolegga/nestjs-cookie-session/badge.svg?branch=master" />
+  <img alt="GitHub branch checks state" src="https://badgen.net/github/checks/iamolegga/nestjs-cookie-session" />
+  <a href="https://codeclimate.com/github/iamolegga/nestjs-cookie-session/test_coverage">
+    <img src="https://api.codeclimate.com/v1/badges/7edd108bf29b26be86b7/test_coverage" />
   </a>
   <img alt="Supported platforms: Express" src="https://img.shields.io/badge/platforms-Express-green" />
 </p>
@@ -26,6 +24,10 @@
 </p>
 
 <p align="center">Idiomatic Cookie Session Module for NestJS. Built on top of <a href="https://npm.im/cookie-session">cookie-session</a> 😎</p>
+
+This module implements a session with storing data directly in `Cookie`.
+
+If you want to store data in one of [external stores](https://github.com/expressjs/session#compatible-session-stores) and passing ID of session to client via `Cookie`/`Set-Cookie` headers, you can look at [nestjs-session](https://github.com/iamolegga/nestjs-session).
 
 ## Example
 
@@ -89,6 +91,7 @@ To run examples:
 git clone https://github.com/iamolegga/nestjs-cookie-session.git
 cd nestjs-cookie-session
 npm i
+npm run build
 cd example
 npm i
 npm start
@@ -97,7 +100,7 @@ npm start
 ## Install
 
 ```sh
-npm i nestjs-cookie-session
+npm i nestjs-cookie-session cookie-session @types/cookie-session
 ```
 
 or
@@ -125,7 +128,7 @@ Accept `NestCookieSessionAsyncOptions`. Returns NestJS `DynamicModule` for impor
 
 ### NestCookieSessionOptions
 
-`NestCookieSessionOptions` is interface of all options, has next properties:
+`NestCookieSessionOptions` is the interface of all options, has next properties:
 
 - `session` - **required** - [cookie-session options](https://github.com/expressjs/cookie-session#options).
 - `forRoutes` - **optional** - same as NestJS built-in `MiddlewareConfigProxy['forRoutes']` [See examples in official docs](https://docs.nestjs.com/middleware#applying-middleware). Specify routes, that should have access to session. If `forRoutes` and `exclude` will not be set, then sessions will be set to all routes.
@@ -133,11 +136,19 @@ Accept `NestCookieSessionAsyncOptions`. Returns NestJS `DynamicModule` for impor
 
 ### NestCookieSessionAsyncOptions
 
-`NestCookieSessionOptions` is interface of options to create cookie session module, that depends on other modules, has next properties:
+`NestCookieSessionOptions` is the interface of options to create cookie session module, that depends on other modules, has next properties:
 
 - `imports` - **optional** - modules, that cookie session module depends on. See [official docs](https://docs.nestjs.com/modules).
 - `inject` - **optional** - providers from `imports`-property modules, that will be passed as arguments to `useFactory` method.
 - `useFactory` - **required** - method, that returns `NestCookieSessionOptions`.
+
+## Migration
+
+### v2
+
+`cookie-session` and `@types/cookie-session` are moved to peer dependencies, so you can update them independently.
+
+---
 
 <h2 align="center">Do you use this library?<br/>Don't be shy to give it a star! ★</h2>
 
@@ -176,6 +187,15 @@ Idiomatic cookie session module for NestJS. Built on top of [cookie-session](htt
 [![npm](https://img.shields.io/npm/dm/nestjs-roles?style=flat-square)](https://www.npmjs.com/package/nestjs-roles)
 
 Type safe roles guard and decorator made easy
+
+---
+
+[nestjs-injectable](https://github.com/segmentstream/nestjs-injectable)
+
+[![GitHub stars](https://img.shields.io/github/stars/segmentstream/nestjs-injectable?style=flat-square)](https://github.com/segmentstream/nestjs-injectable)
+[![npm](https://img.shields.io/npm/dm/nestjs-injectable?style=flat-square)](https://www.npmjs.com/package/nestjs-injectable)
+
+`@Injectable()` on steroids that simplifies work with inversion of control in your hexagonal architecture
 
 ---
 
