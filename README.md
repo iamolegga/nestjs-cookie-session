@@ -103,12 +103,6 @@ npm start
 npm i nestjs-cookie-session cookie-session @types/cookie-session
 ```
 
-or
-
-```sh
-yarn add nestjs-cookie-session
-```
-
 ## API
 
 ### CookieSessionModule
