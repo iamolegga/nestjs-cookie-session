@@ -1,6 +1,6 @@
 {
   "name": "nestjs-cookie-session",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Idiomatic NestJS module for cookie session",
   "main": "index.js",
   "typings": "index.d.ts",
