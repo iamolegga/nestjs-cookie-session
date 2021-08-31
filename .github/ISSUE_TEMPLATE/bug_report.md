@@ -12,7 +12,7 @@ assignees: iamolegga
 
 [ ] I've read [the docs](https://github.com/iamolegga/nestjs-cookie-session/blob/master/README.md)
 
-[ ] I've read [the docs of express-session](https://www.npmjs.com/package/cookie-session)
+[ ] I've read [the docs of cookie-session](https://www.npmjs.com/package/cookie-session)
 
 [ ] I couldn't find the same [bug](https://github.com/iamolegga/nestjs-cookie-session/issues?q=is%3Aissue+label%3Abug)
 
