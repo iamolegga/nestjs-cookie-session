@@ -1,7 +1,8 @@
 import { Controller, Get, Module, Session } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+
 import { CookieSessionModule } from '../src';
-import { fastifyExtraWait } from './utils/fastifyExtraWait';
+
 import { platforms } from './utils/platforms';
 import { doubleRequest } from './utils/request';
 
@@ -39,7 +40,6 @@ describe(CookieSessionModule.forRoot.name, () => {
         const server = app.getHttpServer();
 
         await app.init();
-        await fastifyExtraWait(PlatformAdapter, app);
         const [res1, res2] = await doubleRequest(server);
         await app.close();
 
