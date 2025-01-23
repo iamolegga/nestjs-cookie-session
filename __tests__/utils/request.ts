@@ -6,11 +6,9 @@ export async function doubleRequest(
 ) {
   const result1 = await request(server).get(path);
 
-  const cookie = result1.header['set-cookie'];
+  const cookie = result1.header['set-cookie'] as unknown as string[];
 
-  const result2 = await request(server)
-    .get(path)
-    .set('Cookie', cookie || []);
+  const result2 = await request(server).get(path).set('Cookie', cookie);
 
   return [result1, result2] as [request.Response, request.Response];
 }

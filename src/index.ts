@@ -1,4 +1,4 @@
-import cookieSession = require('cookie-session');
+import cookieSession from 'cookie-session';
 import {
   AsyncOptions,
   createModule,
